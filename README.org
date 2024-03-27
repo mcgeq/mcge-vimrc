@@ -1,0 +1,5 @@
+#+TITLE: Vim Config
+#+AUTHOR: mcge
+#+DATE: <2024-03-27 19:38:19>
+* A simple vim configuration
+
