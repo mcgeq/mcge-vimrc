@@ -47,6 +47,8 @@ for dires in optdires
 	execute 'set runtimepath+=' .. dires
 endfor
 
+set timeoutlen=500
+
 # set background=light
 # g:gruvbox_italic = 1
 # colorscheme gruvbox
