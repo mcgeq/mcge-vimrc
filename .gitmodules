@@ -1,0 +1,18 @@
+[submodule "ale"]
+	path = pack\\mcge\\start\\ale
+	url = git@github.com:dense-analysis/ale.git
+[submodule "nerdtree"]
+	path = pack\\mcge\\start\\nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule "fzf"]
+	path = pack\\mcge\\start\\fzf
+	url = git@github.com:junegunn/fzf.vim.git
+[submodule "gruvbox"]
+	path = pack\\mcge\\start\\gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule "vim-airline"]
+	path = pack\\mcge\\start\\vim-airline
+	url = git@github.com:vim-airline/vim-airline.git
+[submodule "vim-airline-themes"]
+	path = pack\\mcge\\start\\vim-airline-themes
+	url = git@github.com:vim-airline/vim-airline-themes.git
