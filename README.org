@@ -2,4 +2,25 @@
 #+AUTHOR: mcge
 #+DATE: <2024-03-27 19:38:19>
 * A simple vim configuration
+此 vimrc 配置是使用 vim9script 编写。
+** 配置 vimrc
+在=vimrc=文件中写入以下内容
+#+BEGIN_SRC vimscript
+  vim9script
+  # 自定义vim配置文件路径
+  g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
+  var runtimepath_exist = index(split(&runtimepath, ','), g:mcge_customvimrcdir) != -1
+  if !runtimepath_exist
+      # 将自定义的配置文件路径加入`runtimepath'
+      execute 'set runtimepath+=' .. g:mcge_customvimrcdir
+  endif
+  # 判断自定义的配置文件路径是否已经存在packpath中使用vim内置包管理自动加载
+  var packpath_exist = index(split(&packpath, ','), g:mcge_customvimrcdir) != -1
+  var packpath_v = &packpath
+  if !packpath_exist
+      execute 'set packpath+=' .. g:mcge_customvimrcdir
+  endif
+  # 加载配置文件
+  execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
+#+END_SRC
 

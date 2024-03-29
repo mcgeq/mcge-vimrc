@@ -1,9 +1,8 @@
 vim9script
 
-g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
 var mcge_color = g:mcge_customvimrcdir .. "/colors"
-execute 'set runtimepath+=' .. g:mcge_customvimrcdir
-execute 'set runtimepath+=' .. mcge_color 
+execute 'set runtimepath+=' .. mcge_color
+
 # 获取指定字符串结尾目录的下一级目录
 def GetSubDirectories(path: string, suffix: string, next: bool): list<string> 
     var subdirectories = []
@@ -40,7 +39,7 @@ var subdires = GetSubDirectories(g:mcge_customvimrcdir, 'start', true)
 # endfor
 
 # base
-execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/config/mcge_base.vim')
+execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/config/etc/mcge_base.vim')
 
 var optdires = GetSubDirectories(g:mcge_customvimrcdir, 'opt', false)
 # for dires in optdires
