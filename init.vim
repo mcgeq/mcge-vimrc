@@ -1,7 +1,9 @@
 vim9script
 
 g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
-execute 'set runtimepath+=' .. g:mcge_customvimrcdir 
+var mcge_color = g:mcge_customvimrcdir .. "/colors"
+execute 'set runtimepath+=' .. g:mcge_customvimrcdir
+execute 'set runtimepath+=' .. mcge_color 
 # 获取指定字符串结尾目录的下一级目录
 def GetSubDirectories(path: string, suffix: string, next: bool): list<string> 
     var subdirectories = []
@@ -29,25 +31,21 @@ enddef
 
 
 var subdires = GetSubDirectories(g:mcge_customvimrcdir, 'start', true)
-for directory in subdires
-	execute 'set runtimepath+=' .. directory
-	var docdir = directory .. "\\doc"
-	if isdirectory(docdir)
-		execute "helptags " .. docdir
-	endif
-endfor
+# for directory in subdires
+#	execute 'set runtimepath+=' .. directory
+#	var docdir = directory .. "\\doc"
+#	if isdirectory(docdir)
+#		execute "helptags " .. docdir
+#	endif
+# endfor
 
-# ----------font---------------
-if has('gui_running')
-	set guifont=Fira_Code:h12:cANSI:qDRAFT
-endif
+# base
+execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/config/mcge_base.vim')
 
 var optdires = GetSubDirectories(g:mcge_customvimrcdir, 'opt', false)
-for dires in optdires
-	execute 'set runtimepath+=' .. dires
-endfor
-
-set timeoutlen=500
+# for dires in optdires
+#	execute 'set runtimepath+=' .. dires
+# endfor
 
 # set background=light
 # g:gruvbox_italic = 1
