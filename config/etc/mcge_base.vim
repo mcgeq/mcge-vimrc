@@ -12,8 +12,8 @@ if &compatible
 endif
 
 if has('syntax')
-	# syntax enable
-	# syntax on
+	syntax enable
+	syntax on
 endif
 
 if has('autocmd')
@@ -67,13 +67,19 @@ set mouse=n					# 允许 normal 模式使用鼠标,a 是全模式
 set winaltkeys=no
 set lazyredraw				# 延迟绘制，提升性能
 
-set showmatch
-set matchtime=2
+set showmatch               # 高亮显示匹配的括号
+set matchtime=2             # 高亮括号的闪烁时间
 # set ffs=unix,doc,mac		# 文件换行符
 set clipboard+=unnamedplus	# 与系统共用剪切板
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif | normal! zvzz
+endif
+
+if has('gui_running')
+    set guicursor+=a:ver25
+else
+	set guicursor+=a:ver25
 endif
 
 # 文件搜索和补全时忽略如下的扩展名
