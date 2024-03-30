@@ -35,3 +35,16 @@ nnoremap <M-n> <esc>:bnext<cr>
 nmap Q <nop>
 # 使用 Q 进行宏录制
 noremap Q q
+
+# NERDTree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
+# 打开vim时自动打开NERDTree
+# autocmd VimEnter * NERDTree
+
+# \ + r 定位当前文件所在目录，这个很有用
+# 当前从左树进入，又要将当前目录定位到当前位置用这个
+map <leader>r :NERDTreeFind<cr> <C-w><C-w>

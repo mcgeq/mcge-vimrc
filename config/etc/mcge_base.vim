@@ -43,6 +43,7 @@ set softtabstop=4		# 连续数量的空格当成一个制表符
 set shiftwidth=4	
 set smarttab
 set shiftround
+set wildmenu            # 使用tab补全
 
 if has('folding')
 	set foldenable
