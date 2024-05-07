@@ -14,6 +14,22 @@ g:startify_custom_header = [
 g:startify_files_number = 10
 # 自动加载session
 g:startify_session_autoload = 1
+# 设置缩略图
+g:startify_fortune_use_unicode = 1
+
+# 设置 Startify 显示的文件列表
+g:startify_lists = [
+    \ { 'type': 'files', 'header': ['   Recent Files'] },
+    \ { 'type': 'dir', 'header': ['   Project Directory'] },
+    \ { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
+    \ ]
+
+# 设置 Startify 书签
+g:startify_bookmarks = [
+    \ { 'c': '~/.vimrc' },
+    \ { 'd': '~/Documents' },
+    \ { 'w': '~/workspace' },
+    \ ]
 # 过滤列表
 g:startify_skiplist = [
     '^/tmp',

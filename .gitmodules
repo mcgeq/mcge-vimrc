@@ -22,3 +22,6 @@
 [submodule "vim-startify"]
 	path = pack/mcge/start/vim-startify
 	url = git@github.com:mhinz/vim-startify.git
+[submodule "vim-devicons"]
+	path = pack/mcge/start/vim-devicons
+	url = git@github.com:ryanoasis/vim-devicons.git
