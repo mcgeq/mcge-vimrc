@@ -2,6 +2,7 @@
   "dependencies": {
     "coc-json": ">=1.9.2",
     "coc-rust-analyzer": ">=0.75.3",
-    "coc-pairs": ">=1.4.2"
+    "coc-pairs": ">=1.4.2",
+    "coc-tsserver": ">=2.2.0"
   }
 }

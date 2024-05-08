@@ -26,7 +26,7 @@ g:startify_lists = [
 
 # 设置 Startify 书签
 g:startify_bookmarks = [
-    \ { 'c': '~/.vimrc' },
+    \ { 'c': 'D:/config/mcge-vimrc/init.vim' },
     \ { 'd': '~/Documents' },
     \ { 'w': '~/workspace' },
     \ ]
