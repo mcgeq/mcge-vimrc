@@ -44,6 +44,7 @@ set shiftwidth=4
 set smarttab
 set shiftround
 set wildmenu            # 使用tab补全
+set backspace=indent,eol,start
 
 if has('folding')
 	set foldenable

@@ -25,3 +25,7 @@
 [submodule "vim-devicons"]
 	path = pack/mcge/start/vim-devicons
 	url = git@github.com:ryanoasis/vim-devicons.git
+[submodule "coc"]
+	path = pack/mcge/start/coc.nvim
+	url = git@github.com:neoclide/coc.nvim.git
+	branch = release

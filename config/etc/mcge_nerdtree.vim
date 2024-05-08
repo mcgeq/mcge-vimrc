@@ -1,10 +1,10 @@
 vim9script
 
 # 隐藏报错消息
-# autocmd VimEnter * NERDTree
+# autocmd VimEnter * NERDTree D:/config/mcge-vimrc
 
 # 启动vim时自动打开NERDTree，并将光标放在vim打开的文件
-# autocmd VimEnter * NERDTree | wincmd p
+# autocmd VimEnter * NERDTree D:/config/mcge-vimrc | wincmd p
 
 # 如果退出vim后只剩Tree的Tag的话，则自动退出Tree的Tag
 autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
