@@ -8,13 +8,13 @@ execute $"set runtimepath+={mcge_autoload}"
 
 import autoload "mcge_utils.vim"
 
-var core_files =  mcge_utils.GetAllVimFilesInDirectory($"{g:mcge_customvimrcdir}/config/core")
+var core_files =  mcge_utils.GetAllVimFilesInDirectory(g:mcge_customvimrcdir .. "/config/core")
 
 for v in core_files
     execute $"source {v}"
 endfor
 
-var etc_files =  mcge_utils.GetAllVimFilesInDirectory($"{g:mcge_customvimrcdir}/config/etc")
+var etc_files =  mcge_utils.GetAllVimFilesInDirectory(g:mcge_customvimrcdir .. "/config/etc")
 
 for v in etc_files
     execute $"source {v}"
