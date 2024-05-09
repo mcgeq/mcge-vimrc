@@ -1,31 +1,5 @@
 vim9script
 
-# ----------font---------------
-if has('gui_running')
-	set guifont=Fira_Code:h12:cANSI:qDRAFT
-endif
-
-# 基本配置
-if &compatible
-    # 不兼容 vi
-    set nocompatible
-endif
-
-if has('syntax')
-	syntax enable
-	syntax on
-endif
-
-if has('autocmd')
-	filetype plugin indent on
-endif
-
-if has('multi_byte')
-	set encoding=utf-8
-	set fileencoding=utf-8
-	set fileencodings=ucs-bom,utf-8,gb18030,cp936,latin1
-endif
-
 set number          	# 显示行号
 set relativenumber  	# 显示相对行号
 set smartindent     	# 智能缩进
@@ -46,12 +20,6 @@ set shiftround
 set wildmenu            # 使用tab补全
 set backspace=indent,eol,start
 
-if has('folding')
-	set foldenable
-	set foldmethod=syntax	# 基于缩进的折叠
-	set foldlevel=99		# 默认打开所有缩进
-endif
-
 set nobackup
 set nowritebackup
 set shortmess+=c
@@ -61,18 +29,67 @@ set autowrite				# 自动写回
 set confirm					# 显示确认对话框
 set noshowmode
 set ttimeout
-set timeoutlen=500
-set ttimeoutlen=100
-set updatetime=100			# 更新时间 100ms
+set timeoutlen=499
+set ttimeoutlen=99
+set updatetime=99			# 更新时间 100ms
 set mouse=n					# 允许 normal 模式使用鼠标,a 是全模式
 
-set winaltkeys=no
 set lazyredraw				# 延迟绘制，提升性能
 
 set showmatch               # 高亮显示匹配的括号
-set matchtime=2             # 高亮括号的闪烁时间
+set matchtime=1             # 高亮括号的闪烁时间
 # set ffs=unix,doc,mac		# 文件换行符
 set clipboard+=unnamedplus	# 与系统共用剪切板
+
+# 错误格式
+set errorformat+=[%f:%l]\ ->\ %m,[%f:%l]:%m
+
+# ----------font---------------
+if has('gui_running')
+	set guifont=Fira_Code:h12:cANSI:qDRAFT
+endif
+
+# 基本配置
+if &compatible
+    # 不兼容 vi
+    set nocompatible
+endif
+
+# 语法高亮设置
+if has('syntax')
+	syntax enable
+	syntax on
+endif
+
+# 允许 Vim 自带脚本根据文件类型自动设置缩进等
+if has('autocmd')
+	filetype plugin indent on
+endif
+
+# 编码设置
+if has('multi_byte')
+    # 内部工作编码
+	set encoding=utf-8
+    # 文件默认编码
+	set fileencoding=utf-8
+    # 打开文件时自动尝试以下顺序的编码
+	set fileencodings=ucs-bom,utf-8,gbk,gb18030,cp936,latin1
+endif
+
+if has('win32') || has('win64') || has('win95')
+    # Windows 禁用 ALT 操作菜单
+    set winaltkeys=no
+endif
+
+# 设置代码折叠
+if has('folding')
+    # 允许代码折叠
+	set foldenable
+    # 代码折叠默认使用缩进
+	set foldmethod=indent # 基于缩进的折叠
+	set foldlevel=99		# 默认打开所有缩进
+endif
+
 
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif | normal! zvzz
@@ -83,6 +100,7 @@ if has('gui_running')
 else
 	set guicursor+=a:ver25
 endif
+
 
 # 文件搜索和补全时忽略如下的扩展名
 set suffixes=.bak,~,.o,.h,.info,.swp,.obj,.pyc,.pyo,.egg-info,.class

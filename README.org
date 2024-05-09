@@ -16,7 +16,6 @@
   endif
   # 判断自定义的配置文件路径是否已经存在packpath中使用vim内置包管理自动加载
   var packpath_exist = index(split(&packpath, ','), g:mcge_customvimrcdir) != -1
-  var packpath_v = &packpath
   if !packpath_exist
       execute 'set packpath+=' .. g:mcge_customvimrcdir
   endif
