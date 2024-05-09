@@ -19,17 +19,17 @@ g:startify_fortune_use_unicode = 1
 
 # 设置 Startify 显示的文件列表
 g:startify_lists = [
-    \ { 'type': 'files', 'header': ['   Recent Files'] },
-    \ { 'type': 'dir', 'header': ['   Project Directory'] },
-    \ { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
-    \ ]
+    { 'type': 'files', 'header': ['   Recent Files'] },
+    { 'type': 'dir', 'header': ['   Project Directory'] },
+    { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
+    ]
 
 # 设置 Startify 书签
 g:startify_bookmarks = [
-    \ { 'c': 'D:/config/mcge-vimrc/init.vim' },
-    \ { 'd': '~/Documents' },
-    \ { 'w': '~/workspace' },
-    \ ]
+    { 'c': 'D:/config/mcge-vimrc/init.vim' },
+    { 'p': '~/Documents' },
+    { 'w': '~/workspace' },
+    ]
 # 过滤列表
 g:startify_skiplist = [
     '^/tmp',
