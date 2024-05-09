@@ -40,6 +40,7 @@ set showmatch               # 高亮显示匹配的括号
 set matchtime=1             # 高亮括号的闪烁时间
 # set ffs=unix,doc,mac		# 文件换行符
 set clipboard+=unnamedplus	# 与系统共用剪切板
+set fileformat=unix
 
 # 错误格式
 set errorformat+=[%f:%l]\ ->\ %m,[%f:%l]:%m
