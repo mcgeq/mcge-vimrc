@@ -26,9 +26,9 @@ g:startify_lists = [
 
 # 设置 Startify 书签
 g:startify_bookmarks = [
-    { 'c': 'D:/config/mcge-vimrc/init.vim' },
-    { 'p': '~/Documents' },
-    { 'w': '~/workspace' },
+    { 'c': $"{g:mcge_customvimrcdir}/init.vim" },
+    { 'p': $"{g:mcge_custom_project}"},
+    { 'w': $"{g:mcge_custom_workspace}" },
     ]
 # 过滤列表
 g:startify_skiplist = [
