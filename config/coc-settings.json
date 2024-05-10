@@ -1,4 +1,7 @@
 {
     "rust-analyzer.enable": true,
-    "rust-analyzer.checkOnSave": true
+    "rust-analyzer.checkOnSave": true,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.icon.source": "vim-devicons",
+    "explorer.git.enable": true
 }

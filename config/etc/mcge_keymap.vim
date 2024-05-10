@@ -37,11 +37,12 @@ nmap Q <nop>
 noremap Q q
 
 # NERDTree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
-
+# nnoremap <leader>n :NERDTreeFocus<CR>
+# nnoremap <C-n> :NERDTree<CR>
+# nnoremap <C-t> :NERDTreeToggle<CR>
+# nnoremap <C-f> :NERDTreeFind<CR>
+# coc-explorer
+nmap <leader>e :CocCommand explorer<CR>
 # 打开vim时自动打开NERDTree
 # autocmd VimEnter * NERDTree
 
