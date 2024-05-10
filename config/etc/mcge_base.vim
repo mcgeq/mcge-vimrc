@@ -47,7 +47,12 @@ set errorformat+=[%f:%l]\ ->\ %m,[%f:%l]:%m
 
 # ----------font---------------
 if has('gui_running')
-	set guifont=Fira_Code:h12:cANSI:qDRAFT
+	# set guifont=Fira_Code:h12:cANSI:qDRAFT
+    if has('win32') || has('win64')
+        set guifont=FiraMono_Nerd_Font_Mono:h12,FiraCode_Nerd_Font_Mono:h12,Consolas:h12
+    else
+        set guifont=FiraCode_Nerd_Font_Mono:h12
+    endif
 endif
 
 # 基本配置
