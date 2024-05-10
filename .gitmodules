@@ -1,9 +1,3 @@
-[submodule "nerdtree"]
-	path = pack/mcge/start/nerdtree
-	url = git@github.com:preservim/nerdtree.git
-[submodule "fzf"]
-	path = pack/mcge/start/fzf
-	url = git@github.com:junegunn/fzf.vim.git
 [submodule "vim-airline"]
 	path = pack/mcge/start/vim-airline
 	url = git@github.com:vim-airline/vim-airline.git
@@ -35,6 +29,3 @@
 [submodule "vim-fugitive"]
 	path = pack/mcge/start/fugitive
 	url = git@github.com:tpope/vim-fugitive.git
-[submodule "fzf.vim"]
-	path = pack/mcge/start/fzf.vim
-	url = git@github.com:junegunn/fzf.vim.git
