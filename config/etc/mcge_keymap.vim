@@ -38,6 +38,11 @@ noremap Q q
 
 # coc-explorer
 nmap <leader>e :CocCommand explorer<CR>
+
+# fzf
+
 nmap <C-p> :FZF<CR>
 # 在命令行模式下也可以使用 <Ctrl-p> 快捷键调用 FZF
 cnoremap <C-p> <C-r>=fzf#run({'sink': 'insert'})<CR>
+nmap <C-f> :Files<CR>
+
