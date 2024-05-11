@@ -2,13 +2,12 @@ vim9script
 
 # 自定义Startify的Header和Footer
 g:startify_custom_header = [
- ' __  __            __ _',
-'|  \/  |   __     / _` |   ___',  
-'| |\/| |  / _|    \__, |  / -_)',  
-'|_|__|_|  \__|_   |___/   \___|',  
-'_|"""""|_|"""""|_|"""""|_|"""""|',
-'"`-0-0-`"`-0-0-`"`-0-0-`"`-0-0-`',
-]
+"mm mm mmmm    cccc  gggggg   eee",
+"mmm  mm  mm cc     gg   gg ee   e", 
+"mmm  mm  mm cc     ggggggg eeeee",
+"mmm  mm  mm  ccccc      gg  eeeee",
+"                    ggggg",
+\]
 
 # 起始页显示的列表长度
 g:startify_files_number = 10
@@ -34,4 +33,3 @@ g:startify_bookmarks = [
 g:startify_skiplist = [
     '^/tmp',
 ]
-
