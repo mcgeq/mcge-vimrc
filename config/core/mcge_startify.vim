@@ -19,9 +19,9 @@ g:startify_fortune_use_unicode = 1
 
 # 设置 Startify 显示的文件列表
 g:startify_lists = [
+    { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
     { 'type': 'files', 'header': ['   Recent Files'] },
     { 'type': 'dir', 'header': ['   Project Directory'] },
-    { 'type': 'bookmarks', 'header': ['   Bookmarks'] },
     ]
 
 # 设置 Startify 书签
@@ -34,16 +34,4 @@ g:startify_bookmarks = [
 g:startify_skiplist = [
     '^/tmp',
 ]
-
-# NERDTree bookmarks单独显示
-
-def SomeCheck()
-    if filereadable(expand('%'))
-        echo "SpecificFile exists"
-    else
-        autocmd VimEnter * Startify
-    endif
-enddef
-
-SomeCheck()
 

@@ -6,6 +6,78 @@
 ** 配置 vimrc
 在=vimrc=文件中写入以下内容
 #+BEGIN_SRC vimscript
+    vim9script
+
+    def SetPackPath(custom_dir: string)
+        var packpath_exist = index(split(&packpath, ','), custom_dir) != -1
+        if !packpath_exist
+            execute 'set packpath+=' .. custom_dir
+        endif
+    enddef
+    
+    # 自定义一些全局变量
+    g:mcge_custom_project = "F:/2024/projects"
+    g:mcge_custom_workspace = "F:/workspace"
+    g:mcge_custom_fzf_dir = "D:/bin/fzf"
+
+    # 自定义vim配置文件路径
+    g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
+
+    if has('unix')
+        g:mcge_customvimrcdir = "~/mcge-vimrc"
+        g:mcge_custom_project = "~/projects"
+        g:mcge_custom_workspace = "~/workspace"
+        g:mcge_custom_fzf_dir = "~/.fzf"
+    endif
+
+    SetPackPath(g:mcge_customvimrcdir)
+
+    execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
+#+END_SRC
+
+** 废弃
+#+BEGIN_SRC vimscript
+    vim9script
+
+    def SetRuntimePath(custom_dir: string)
+        var runtimepath_exist = index(split(&runtimepath, ','), custom_dir) != -1
+        if !runtimepath_exist
+            execute 'set runtimepath+=' .. custom_dir
+        endif
+    enddef
+
+    def SetPackPath(custom_dir: string)
+        var packpath_exist = index(split(&packpath, ','), custom_dir) != -1
+        if !packpath_exist
+            execute 'set packpath+=' .. custom_dir
+        endif
+    enddef
+    
+    # 自定义一些全局变量
+    g:mcge_custom_project = "F:/2024/projects"
+    g:mcge_custom_workspace = "F:/workspace"
+    g:mcge_custom_fzf_dir = "D:/bin/fzf"
+
+    # 自定义vim配置文件路径
+    g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
+
+    if has('unix')
+        g:mcge_customvimrcdir = "~/mcge-vimrc"
+        g:mcge_custom_project = "~/projects"
+        g:mcge_custom_workspace = "~/workspace"
+        g:mcge_custom_fzf_dir = "~/.fzf"
+    endif
+
+    SetRuntimePath(g:mcge_customvimrcdir)
+    SetRuntimePath(g:mcge_custom_fzf_dir)
+
+    SetPackPath(g:mcge_customvimrcdir)
+
+    execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
+#+END_SRC
+
+** 废弃
+#+BEGIN_SRC vimscript
   vim9script
   # 自定义一些全局变量
   g:mcge_custom_project = "F:/2024/projects"
