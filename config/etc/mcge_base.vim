@@ -10,11 +10,7 @@ set hidden				# 终端隐藏后不结束
 set ignorecase			# 忽略大小写
 set infercase
 set history=500			# 历史命令
-set splitbelow			# 在下方分割
-set expandtab			# tab 扩展为空格
-set tabstop=4
-set softtabstop=4		# 连续数量的空格当成一个制表符
-set shiftwidth=4	
+set splitbelow			# 在下方分割	
 set smarttab
 set shiftround
 set wildmenu            # 使用tab补全
@@ -31,7 +27,7 @@ set noshowmode
 set ttimeout
 set timeoutlen=499
 set ttimeoutlen=99
-set updatetime=99			# 更新时间 100ms
+set updatetime=300			# 更新时间 100ms
 set mouse=n					# 允许 normal 模式使用鼠标,a 是全模式
 
 set lazyredraw				# 延迟绘制，提升性能
@@ -41,6 +37,11 @@ set matchtime=1             # 高亮括号的闪烁时间
 # set ffs=unix,doc,mac		# 文件换行符
 set clipboard+=unnamedplus	# 与系统共用剪切板
 set fileformat=unix
+
+# coc
+# Always show the signcolumn, otherwise it would shift the text each time
+# diagnostics appear/become resolved
+set signcolumn=yes
 
 # 错误格式
 set errorformat+=[%f:%l]\ ->\ %m,[%f:%l]:%m

@@ -26,3 +26,17 @@ def GetVimFilesRecursively(directory: string, files: list<string>)
     endfor
 enddef
 
+
+export def CheckBackspace(): bool
+  var col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+enddef
+
+export def ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+enddef
+
