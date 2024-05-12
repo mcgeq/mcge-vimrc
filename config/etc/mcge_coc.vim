@@ -23,6 +23,7 @@ g:coc_global_extensions = [
     "coc-eslint",
     "coc-prettier",
     "coc-java",
+    "coc-highlight",
 \]
 
 # https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
@@ -52,4 +53,5 @@ command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.org
 # provide custom statusline: lightline.vim, vim-airline
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-
+# 补全高亮
+autocmd CursorHold * silent call CocActionAsync('highlight')
