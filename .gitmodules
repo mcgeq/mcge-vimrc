@@ -38,6 +38,3 @@
 [submodule "fzfx"]
 	path = pack/mcge/start/fzfx
 	url = git@github.com:linrongbin16/fzfx.vim.git
-[submodule "rainbow"]
-	path = pack/mcge/start/rainbow
-	url = git@github.com:luochen1990/rainbow.git
