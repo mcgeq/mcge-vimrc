@@ -2,7 +2,7 @@ vim9script
 
 import autoload "mcge_utils.vim"
 
-# ---------------------------------------- 保存退出 start ----------------------------------------
+# -------------------- 保存退出 start --------------------
 # 保存
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>
@@ -10,9 +10,9 @@ vnoremap <C-s> <Esc>:w<CR>
 
 # 退出
 
-# ---------------------------------------- 保存退出 end   ----------------------------------------
+# -------------------- 保存退出 end   --------------------
 
-# ---------------------------------------- 窗口 start ----------------------------------------
+# -------------------- 窗口 start --------------------
 noremap <c-h> <C-w>h
 noremap <c-j> <C-w>j
 noremap <c-k> <C-w>k
@@ -31,36 +31,47 @@ nnoremap <c-w>l :rightbelow vsplit <cr>
 # 关闭窗口
 nnoremap <silent> q <esc>:close<cr>
 vnoremap <silent> q <esc>:close<cr>
-# ---------------------------------------- 窗口 end ----------------------------------------
+# -------------------- 窗口 end --------------------
 
-# ---------------------------------------- 命令行 start ----------------------------------------
+# -------------------- 命令行 start --------------------
 # 命令行移动
 cnoremap <C-h> <Home>
 cnoremap <C-l> <End>
-# ---------------------------------------- 命令行 end ----------------------------------------
+# -------------------- 命令行 end --------------------
 
-# ---------------------------------------- buffer start ----------------------------------------
+# -------------------- buffer start --------------------
 # 使用 alt q 关闭当前 buffer
 nnoremap <M-q> <esc>:bdelete<cr>
 
 # 切换buffer
 nnoremap <M-p> <esc>:bprevious<cr>
 nnoremap <M-n> <esc>:bnext<cr>
-# ---------------------------------------- buffer end ----------------------------------------
+# -------------------- buffer end --------------------
 
-# ---------------------------------------- 宏 start ----------------------------------------
+# -------------------- 宏 start --------------------
 # 去除 EX 模式
 nmap Q <nop>
 # 使用 Q 进行宏录制
 noremap Q q
-# ---------------------------------------- 宏 end ----------------------------------------
+# -------------------- 宏 end --------------------
 
-# ---------------------------------------- coc-explorer start ----------------------------------------
+# -------------------- coc-explorer start --------------------
 # coc-explorer
 nmap <leader>e :CocCommand explorer<CR>
-# ---------------------------------------- coc-explorer end ----------------------------------------
+nmap <leader>ed <Cmd>CocCommand explorer --preset .vim<CR>
+nmap <leader>ef <Cmd>CocCommand explorer --preset floating<CR>
+nmap <leader>ec <Cmd>CocCommand explorer --preset cocConfig<CR>
+nmap <leader>eb <Cmd>CocCommand explorer --preset buffer<CR>
 
-# ---------------------------------------- fzf start ----------------------------------------
+# List all Presets
+nmap <leader>el <Cmd>CocList explPresets<CR>
+# -------------------- coc-explorer end --------------------
+
+# -------------------- coc-yank start --------------------
+nnoremap <silent> <leader>y :<C-u>CocList -A --normal yank<CR> 
+# -------------------- coc-yank end   -------------------- 
+
+# -------------------- fzf start --------------------
 # fzf
 nmap <C-p> :FZF<CR>
 # 在命令行模式下也可以使用 <Ctrl-p> 快捷键调用 FZF
@@ -133,9 +144,9 @@ nnoremap <space>cm :\<C-U>FzfxCommands<CR>
 xnoremap <space>cm :\<C-U>FzfxCommandsV<CR>
 # by cursor word
 nnoremap <space>wcm :\<C-U>FzfxCommandsW<CR>
-# ---------------------------------------- fzf end ----------------------------------------
+# -------------------- fzf end --------------------
 
-# ---------------------------------------- coc start ----------------------------------------
+# -------------------- coc start --------------------
 # Use tab for trigger completion with characters ahead and navigate
 # NOTE: There's always complete item selected by default, you may want to enable
 # no select by `"suggest.noselect": true` in your configuration file
@@ -243,4 +254,4 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 # Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-# ---------------------------------------- coc end ----------------------------------------
+# -------------------- coc end --------------------
