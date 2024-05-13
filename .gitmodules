@@ -41,3 +41,6 @@
 [submodule "nerdcommenter"]
 	path = pack/mcge/start/nerdcommenter
 	url = git@github.com:preservim/nerdcommenter.git
+[submodule "ultisnips"]
+	path = pack/mcge/start/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
