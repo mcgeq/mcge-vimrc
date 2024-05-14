@@ -1,5 +1,5 @@
 @echo off
-REM setlocal enabledelayedexpansion
+setlocal enabledelayedexpansion
 
 REM 文件存在会覆盖文件内容
 set WRITE_VIMRC_FILE=%USERPROFILE%\vimfiles\vimrc
@@ -22,9 +22,9 @@ if exist %WRITE_VIMRC_FILE% (
     REM 复制文件并重命名
     copy ^/y "%WRITE_VIMRC_FILE%" "%distFile%"
     
-    echo The file is copied as [ %distFile% ]  
+    echo The file is copied as [ %distFile% ]
 
-REM    del %WRITE_VIMRC_FILE%
+    del %WRITE_VIMRC_FILE%
 )
 
 REM 获取当前目录
