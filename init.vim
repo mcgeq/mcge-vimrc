@@ -2,6 +2,11 @@ vim9script
 
 var mcge_color = $"{g:mcge_customvimrcdir}/colors"
 execute $"set runtimepath+={mcge_color}"
+
+# ftplugin
+var mcge_ftplugin = $"{g:mcge_customvimrcdir}/ftplugin"
+execute $"set runtimepath+={mcge_ftplugin}"
+
 # autoload
 var mcge_autoload = $"{g:mcge_customvimrcdir}/config"
 execute $"set runtimepath+={mcge_autoload}"
