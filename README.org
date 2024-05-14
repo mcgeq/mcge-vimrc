@@ -3,7 +3,22 @@
 #+DATE: <2024-03-27 19:38:19>
 * A simple vim configuration
 此 vimrc 配置是使用 vim9script 编写。
-** 配置 vimrc
+
+** 使用方式
+
+1. windows平台运行=install.bat=文件
+2. Linux平台运行=install.sh=文件
+
+** 配置文件目录介绍
+- colors :: 自定义 colorscheme
+- pack :: 插件，使用 vim 内置的包管理功能
+- config :: 存放具体配置的目录
+  + core :: 全局变量等
+- ftdetect :: 设置文件类型检测
+- ftplugin :: 针对文件类型加载的插件
+
+** 废弃
+*** 配置 vimrc
 在=vimrc=文件中写入以下内容
 #+BEGIN_SRC vimscript
     vim9script
@@ -45,7 +60,7 @@
     execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
 #+END_SRC
 
-** 废弃
+*** 废弃
 #+BEGIN_SRC vimscript
     vim9script
 
@@ -86,7 +101,7 @@
     execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
 #+END_SRC
 
-** 废弃
+*** 废弃
 #+BEGIN_SRC vimscript
   vim9script
   # 自定义一些全局变量
@@ -116,7 +131,7 @@
   execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
 #+END_SRC
 
-** 废弃的方法
+*** 废弃的方法
 #+BEGIN_SRC vimscript
 # 获取指定字符串结尾目录的下一级目录
 def GetSubDirectories(path: string, suffix: string, next: bool): list<string> 
@@ -158,10 +173,3 @@ var optdires = GetSubDirectories(g:mcge_customvimrcdir, 'opt', false)
 # endfor
 #+END_SRC
 
-** 配置文件目录介绍
-- colors :: 自定义 colorscheme
-- pack :: 插件，使用 vim 内置的包管理功能
-- config :: 存放具体配置的目录
-  + core :: 全局变量等
-- ftdetect :: 设置文件类型检测
-- ftplugin :: 针对文件类型加载的插件

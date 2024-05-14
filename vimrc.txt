@@ -25,13 +25,16 @@ if has("unix")
 endif
 
 SetPackPath(g:mcge_customvimrcdir)
-var vim_pos_x = 1000
-var vim_pos_y = 10
-var vim_width = 50
-var vim_height = 90
 
-execute $"set lines={vim_width}"
-execute $"set columns={vim_height}"
-execute $"winpos {vim_pos_x} {vim_pos_y}"
+if has("gui_running")
+    var vim_pos_x = 1000
+    var vim_pos_y = 10
+    var vim_width = 50
+    var vim_height = 90
+
+    execute $"set lines={vim_width}"
+    execute $"set columns={vim_height}"
+    execute $"winpos {vim_pos_x} {vim_pos_y}"
+endif
 
 execute 'source ' .. fnameescape(g:mcge_customvimrcdir .. '/init.vim')
