@@ -1,4 +1,11 @@
 {
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    }
+  },
   "eslint.autoFixOnSave": true,
   "rust-analyzer.enable": true,
   "rust-analyzer.checkOnSave": true,
