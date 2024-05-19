@@ -255,3 +255,27 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 # Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 # -------------------- coc end --------------------
+
+# -------------------- git start --------------------
+nnoremap <silent><nowait> <M-g>g  :G<CR>
+# q 关闭窗口
+# A 调整大小至作者
+# C 调整大小至提交列
+# D 调整大小至日期/时间列
+nnoremap <silent><nowait> <M-g>b  :Gblame<CR>
+nnoremap <silent><nowait> <M-g>d  :Gdiffsplit<CR>
+nnoremap <silent><nowait> <M-g>w  :Gwrite<CR>
+nnoremap <silent><nowait> <M-g>r  :Gread<CR>
+nnoremap <silent><nowait> <M-g>c  :Gclog<CR>
+nnoremap <silent><nowait> <M-g>o  :copen<CR>
+nnoremap <silent><nowait> <M-g>q  :cclose<CR>
+nnoremap <silent><nowait> <M-g>n  :cnext<CR>
+nnoremap <silent><nowait> <M-g>p  :cprevious<CR>
+inoremap <silent><nowait> <M-g>g  <esc>:G<CR>
+inoremap <silent><nowait> <M-g>b  <Esc>:Gblame<CR>
+inoremap <silent><nowait> <M-g>d  <Esc>:Gdiffsplit<CR>
+inoremap <silent><nowait> <M-g>w  <Esc>:Gwrite<CR>
+inoremap <silent><nowait> <M-g>r  <Esc>:Gread<CR>
+inoremap <silent><nowait> <M-g>c  <Esc>:Gclog<CR>
+# -------------------- git end --------------------
+#
