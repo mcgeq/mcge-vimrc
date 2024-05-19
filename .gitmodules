@@ -47,3 +47,6 @@
 [submodule "ultisnips"]
 	path = pack/mcge/start/ultisnips
 	url = git@github.com:SirVer/ultisnips.git
+[submodule "vista.vim"]
+	path = pack/mcge/start/vista.vim
+	url = git@github.com:liuchengxu/vista.vim.git
