@@ -35,9 +35,6 @@
 [submodule "fzf"]
 	path = pack/mcge/start/fzf
 	url = git@github.com:junegunn/fzf.git
-[submodule "fzfx"]
-	path = pack/mcge/start/fzfx
-	url = git@github.com:linrongbin16/fzfx.vim.git
 [submodule "nerdcommenter"]
 	path = pack/mcge/start/nerdcommenter
 	url = git@github.com:preservim/nerdcommenter.git
