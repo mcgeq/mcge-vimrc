@@ -71,14 +71,6 @@ nmap <leader>el <Cmd>CocList explPresets<CR>
 nnoremap <silent> <leader>y :<C-u>CocList -A --normal yank<CR> 
 # -------------------- coc-yank end   -------------------- 
 
-# -------------------- fzf start --------------------
-# fzf
-nmap <C-p> :FZF<CR>
-# 在命令行模式下也可以使用 <Ctrl-p> 快捷键调用 FZF
-cnoremap <C-p> <C-r>=fzf#run({'sink': 'insert'})<CR>
-nmap <C-f> :Files<CR>
-# -------------------- fzf end   -------------------- 
-
 # -------------------- coc start --------------------
 # Use tab for trigger completion with characters ahead and navigate
 # NOTE: There's always complete item selected by default, you may want to enable
