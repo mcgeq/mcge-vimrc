@@ -23,7 +23,7 @@ g:which_key_map.f.d = 'open-vimrc'
 nnoremap <silent> <leader>oq  :copen<CR>
 nnoremap <silent> <leader>ol  :lopen<CR>
 
-g:which_key_map.v = {
+g:which_key_map.m = {
     "name": "+clap",
     "p": "clap",
     "b": "buffer",

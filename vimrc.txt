@@ -1,10 +1,12 @@
 vim9script
 # Update the file modification time.
-autocmd BufWritePre,FileWritePre *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs execute "normal ma"
-autocmd BufWritePre,FileWritePre *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs exe $":1,12g/Last modified:.*/s/Last Modified:.*/Last Modified:  {strftime('%Y-%m-%d %H:%M:%S')}"
+augroup MCGE_AUTO
+    autocmd!
+    autocmd BufWritePre,FileWritePre *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs execute "normal ma"
+    autocmd BufWritePre,FileWritePre *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs exe $":1,12g/Last modified:.*/s/Last Modified:.*/Last Modified:  {strftime('%Y-%m-%d %H:%M:%S')}"
 # autocmd BufWritePre,FileWritePre *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs exe $":1,12g/Modify Counts:.*/s/Modify Counts:.*/Modify Counts:  {(str2nr(submatch(1)) + 1)}"
-autocmd BufWritePost,FileWritePost *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs execute "normal `a"
-
+    autocmd BufWritePost,FileWritePost *.c,*.h,*.cpp,*.py,*.rs,*.ts,*.js,*.cs execute "normal `a"
+augroup END
 
 def SetPackPath(custom_dir: string)
     var packpath_exist = index(split(&packpath, ','), custom_dir) != -1
@@ -16,6 +18,7 @@ enddef
 # 自定义一些全局变量
 g:mcge_custom_author = "mcge"
 g:mcge_custom_email = "<mcgeq@outlook.com>"
+g:mcge_custom_vista_executive = "ctags"
 g:mcge_custom_copyright = $"Copyright (C) {strftime('%Y')} Mcge. All rights reserved."
 g:mcge_custom_project = "F:/2024/projects"
 g:mcge_custom_workspace = "F:/workspace"
