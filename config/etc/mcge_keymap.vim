@@ -23,11 +23,6 @@ tnoremap <c-k> <c-\><c-n><c-w>k
 tnoremap <c-l> <c-\><c-n><c-w>l
 
 
-# 分隔窗口
-nnoremap <c-w>k :abo split <cr>
-nnoremap <c-w>h :abo vsplit <cr>
-nnoremap <c-w>j :rightbelow split <cr>
-nnoremap <c-w>l :rightbelow vsplit <cr>
 # 关闭窗口
 nnoremap <silent> q <esc>:close<cr>
 vnoremap <silent> q <esc>:close<cr>
@@ -187,21 +182,21 @@ nnoremap <silent><nowait> <M-g>g  :G<CR>
 # A 调整大小至作者
 # C 调整大小至提交列
 # D 调整大小至日期/时间列
-nnoremap <silent><nowait> <M-g>b  :Gblame<CR>
-nnoremap <silent><nowait> <M-g>d  :Gdiffsplit<CR>
-nnoremap <silent><nowait> <M-g>w  :Gwrite<CR>
-nnoremap <silent><nowait> <M-g>r  :Gread<CR>
-nnoremap <silent><nowait> <M-g>c  :Gclog<CR>
-nnoremap <silent><nowait> <M-g>o  :copen<CR>
-nnoremap <silent><nowait> <M-g>q  :cclose<CR>
-nnoremap <silent><nowait> <M-g>n  :cnext<CR>
-nnoremap <silent><nowait> <M-g>p  :cprevious<CR>
-inoremap <silent><nowait> <M-g>g  <esc>:G<CR>
-inoremap <silent><nowait> <M-g>b  <Esc>:Gblame<CR>
-inoremap <silent><nowait> <M-g>d  <Esc>:Gdiffsplit<CR>
-inoremap <silent><nowait> <M-g>w  <Esc>:Gwrite<CR>
-inoremap <silent><nowait> <M-g>r  <Esc>:Gread<CR>
-inoremap <silent><nowait> <M-g>c  <Esc>:Gclog<CR>
+nnoremap <silent><nowait> <M-g>b  :<c-u>Gblame<CR>
+nnoremap <silent><nowait> <M-g>d  :<c-u>Gdiffsplit<CR>
+nnoremap <silent><nowait> <M-g>w  :<c-u>Gwrite<CR>
+nnoremap <silent><nowait> <M-g>r  :<c-u>Gread<CR>
+nnoremap <silent><nowait> <M-g>c  :<c-u>Gclog<CR>
+nnoremap <silent><nowait> <M-g>o  :<c-u>copen<CR>
+nnoremap <silent><nowait> <M-g>q  :<c-u>cclose<CR>
+nnoremap <silent><nowait> <M-g>n  :<c-u>cnext<CR>
+nnoremap <silent><nowait> <M-g>p  :<c-u>cprevious<CR>
+inoremap <silent><nowait> <M-g>g  <esc>:<c-u>G<CR>
+inoremap <silent><nowait> <M-g>b  <Esc>:<c-u>Gblame<CR>
+inoremap <silent><nowait> <M-g>d  <Esc>:<c-u>Gdiffsplit<CR>
+inoremap <silent><nowait> <M-g>w  <Esc>:<c-u>Gwrite<CR>
+inoremap <silent><nowait> <M-g>r  <Esc>:<c-u>Gread<CR>
+inoremap <silent><nowait> <M-g>c  <Esc>:<c-u>Gclog<CR>
 # -------------------- git end --------------------
 
 # -------------------- vim-clap start --------------------
