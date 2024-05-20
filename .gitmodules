@@ -47,3 +47,6 @@
 [submodule "vista.vim"]
 	path = pack/mcge/start/vista.vim
 	url = git@github.com:liuchengxu/vista.vim.git
+[submodule "vim-clap"]
+	path = pack/mcge/start/vim-clap
+	url = git@github.com:liuchengxu/vim-clap.git

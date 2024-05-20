@@ -23,6 +23,21 @@ g:which_key_map.f.d = 'open-vimrc'
 nnoremap <silent> <leader>oq  :copen<CR>
 nnoremap <silent> <leader>ol  :lopen<CR>
 
+g:which_key_map.v = {
+    "name": "+clap",
+    "p": "clap",
+    "b": "buffer",
+    "c": "command",
+    "h": "file history",
+    "f": "search file",
+    "q": "quickfix list",
+    "j": "jumps",
+    "m": "marks",
+    "w": "windows",
+    "t": "tags",
+    "s": "colors",
+    "g": "find word", }
+
 g:which_key_map.w = {
     'name': '+windows',
     "w": ['<C-W>w', 'other-window'],
