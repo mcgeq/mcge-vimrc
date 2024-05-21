@@ -25,18 +25,20 @@ nnoremap <silent> <leader>ol  :lopen<CR>
 
 g:which_key_map.m = {
     "name": "+clap",
-    "p": "clap",
-    "b": "buffer",
-    "c": "command",
-    "h": "file history",
-    "f": "search file",
-    "q": "quickfix list",
-    "j": "jumps",
-    "m": "marks",
-    "w": "windows",
-    "t": "tags",
-    "s": "colors",
-    "g": "find word", }
+    "p": [":Clap", "providers"],
+    "b": [":Clap buffers", "buffers"],
+    "bc": [":Clap commits", "git commits"],
+    "bcc": [":Clap bcommits", "current buffer git commits"],
+    "c": [":Clap command", "command"],
+    "h": [":Clap history", "file history"],
+    "f": [":Clap files", "search file"],
+    "q": [":Clap quickfix", "quickfix list"],
+    "j": [":Clap jumps", "jumps"],
+    "m": [":Clap marks", "marks"],
+    "w": [":Clap windows", "windows"],
+    "t": [":Clap tags", "tags"],
+    "s": [":Clap colors", "colors"],
+    "g": [":Clap grep2", "find word"], }
 
 g:which_key_map.w = {
     'name': '+windows',
