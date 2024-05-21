@@ -31,7 +31,7 @@ g:which_key_map.m = {
     "bcc": [":Clap bcommits", "current buffer git commits"],
     "c": [":Clap command", "command"],
     "h": [":Clap history", "file history"],
-    "f": [":Clap files", "search file"],
+    "f": [":Clap files ++finder=rg --files --ignore --hidden", "search file"],
     "q": [":Clap quickfix", "quickfix list"],
     "j": [":Clap jumps", "jumps"],
     "m": [":Clap marks", "marks"],
