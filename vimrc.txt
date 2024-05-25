@@ -26,7 +26,7 @@ g:mcge_custom_fzf_dir = "D:/bin/fzf"
 g:mcge_custom_preview_bash = "D:/bin/Git/bin/bash.exe"
 
 # 自定义vim配置文件路径
-g:mcge_customvimrcdir = "D:/config/mcge-vimrc"
+g:mcge_customvimrcdir = "D:/config/dotfiles/mcge-vimrc"
 
 if has("unix")
     g:mcge_customvimrcdir = "~/mcge-vimrc"
