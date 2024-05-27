@@ -28,7 +28,9 @@ g:coc_global_extensions = [
     "coc-eslint",
     "coc-prettier",
     "coc-java",
+    "coc-lua",
     "coc-highlight",
+    "coc-lightbulb",
 \]
 
 # https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.vim
