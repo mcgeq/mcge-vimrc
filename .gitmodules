@@ -44,3 +44,6 @@
 [submodule "vim-clap"]
 	path = pack/mcge/start/vim-clap
 	url = git@github.com:liuchengxu/vim-clap.git
+[submodule "vim-css-color"]
+	path = pack/mcge/start/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
